@@ -1,6 +1,8 @@
 /* VARIAVEIS */
 :root {
     --header-color: #000;
+    --h1-color:#393c41;
+    --h2-color:#6e7378;
 
 }
 
@@ -29,6 +31,10 @@ header {
     justify-content:space-between;
     align-items:center;
     height:50px;
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
 }
 
 header ul, header li {
@@ -69,6 +75,39 @@ header .menu--icon {
 header .menu--icon div {
     height:2px;
     background-color:var(--header-color);
+}
+
+/* MAIN */
+main {
+    background-image:url(../images/bg.jpg);
+    background-size:cover;
+    background-position:center;
+    height:100vh;
+}
+
+main .info {
+    height:45vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center
+}
+
+main h1 {
+    font-size:40px;
+    font-weight:normal;
+    color:var(--h1-color)
+}
+
+main h2 {
+    font-size:14x;
+    font-weight:normal;
+    font-family:'GothamBook', Helvetica, Arial;
+    color:var(--h2-color);
+}
+
+main h2 a {
+    color:var(--h2-color);
 }
 
 
