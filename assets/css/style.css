@@ -7,7 +7,6 @@
     --btn-light-bg:rgba(255, 255, 255, 0.65);
     --btn-dark-color:#fff;
     --btn-light-color:#000;
-
 }
 
 /* FONTES */
@@ -174,4 +173,26 @@ footer .arrow {
     animation-name:arrow;
     animation-duration:2s;
     animation-iteration-count:infinite;
+}
+
+/* MEDIA QUERIES */
+@media (max-width:1200px) {
+    header .middle,
+    header .rightside li a {
+        display:none;
+    }
+    header .rightside li.menu {
+        margin-right:20px;
+    }
+}
+
+@media (max-width:600px) {
+    footer .buttons--area {
+        flex-direction:column;
+        align-items:center;
+    }
+    footer .buttons--area a {
+        margin:10px 20px;
+        width:calc(100vw - 60px);
+    }
 }
