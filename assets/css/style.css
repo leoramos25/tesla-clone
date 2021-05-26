@@ -1,5 +1,74 @@
+/* VARIAVEIS */
+:root {
+    --header-color: #000;
+
+}
+
+/* FONTES */
+@font-face {
+    font-family:GothamMedium;
+    src:url(../fonts/GothamMedium.otf);
+}
+
+@font-face {
+    font-family:GothamBook;
+    src:url(../fonts/GothamBookRegular.otf);
+}
+
 * {
     padding:0;
     margin:0;
     box-sizing:border-box;
+    font-family:'GothamMedium', Helverica, Arial;
+    font-size:14px;
 }
+
+/* HEADER */
+header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:50px;
+}
+
+header ul, header li {
+    list-style:none;
+}
+
+header .logo {
+    width:120px;
+    margin-left:20px;
+}
+
+header .middle ul,
+header .rightside ul {
+    display:flex;
+}
+
+header .middle li,
+header .rightside li {
+    margin:0 10px;
+}
+
+header .middle a, 
+header .rightside a {
+    text-decoration:none;
+    text-transform:uppercase;
+    color: var(--header-color);
+}
+
+header .menu--icon {
+    width:18px;
+    height:16px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    cursor:pointer;
+}
+
+header .menu--icon div {
+    height:2px;
+    background-color:var(--header-color);
+}
+
+
