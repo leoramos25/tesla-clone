@@ -48,6 +48,10 @@ header .logo {
     margin-left:20px;
 }
 
+header .rightside {
+    display:flex;
+}
+
 header .middle ul,
 header .rightside ul {
     display:flex;
@@ -65,18 +69,59 @@ header .rightside a {
     color: var(--header-color);
 }
 
-header .menu--icon {
-    width:18px;
+.menu-icon {
     height:16px;
     display:flex;
-    flex-direction:column;
-    justify-content:space-around;
-    cursor:pointer;
+    justify-content:center;
+    align-items:center;
 }
 
-header .menu--icon div {
+#checkbox {
+    position:absolute;
+    opacity:0;
+}
+
+.checklabel {
+    cursor:pointer;
+    position:relative;
+    display:block;
+    height:16px;
+    width:18px;
+}
+
+label .menu-line {
+    position:absolute;
+    display:block;
     height:2px;
+    width:100%;
     background-color:var(--header-color);
+    transition: all 0.5s ease-in-out;
+}
+
+label .menu-line:nth-child(1) {
+    top:2px;
+}
+
+label .menu-line:nth-child(2) {
+    top:7px;
+} 
+
+label .menu-line:nth-child(3) {
+    top:12px;
+} 
+
+#checkbox:checked + label .menu-line:nth-child(1) {
+    transform: rotate(45deg);
+    top:7px;
+}
+
+#checkbox:checked + label .menu-line:nth-child(2) {
+    opacity:0;
+}
+
+#checkbox:checked + label .menu-line:nth-child(3) {
+    transform: rotate(-45deg);
+    top:7px;
 }
 
 /* MAIN */
