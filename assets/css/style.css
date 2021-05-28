@@ -76,6 +76,13 @@ header .rightside a {
     align-items:center;
 }
 
+.rightside ul .menu-icon {
+    position:relative;
+    z-index:1;
+    margin-right:20px;
+}
+
+
 #checkbox {
     position:absolute;
     opacity:0;
@@ -122,6 +129,35 @@ label .menu-line:nth-child(3) {
 #checkbox:checked + label .menu-line:nth-child(3) {
     transform: rotate(-45deg);
     top:7px;
+}
+nav {
+    position:absolute;
+    top:0;
+    right:0;
+    width:0px;
+    height:100vh;
+    background-color:#fff;
+    overflow-y:auto;
+    transition: all 0.5s ease-in-out;
+}
+
+nav ul {
+    padding:0;
+    margin:0;
+    margin-top:50px;
+    display:flex;
+    flex-direction:column;
+}
+
+nav ul li {
+    padding:0;
+    margin:0;
+    border-bottom:1px solid #ccc;
+}
+nav ul a {
+    margin:0;
+    display:block;
+    padding:20px;
 }
 
 /* MAIN */
@@ -228,6 +264,9 @@ footer .arrow {
     }
     header .rightside li.menu {
         margin-right:20px;
+    }
+    .rightside nav ul a {
+        display:block;
     }
 }
 
