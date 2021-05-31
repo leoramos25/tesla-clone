@@ -1,10 +1,11 @@
-let menu = document.querySelector('.checklabel');
-let nav = document.querySelector('nav');
+const menu = document.querySelector('.checklabel');
 
-menu.addEventListener('click', function menuToggle(){
-    if(nav.style.width == '320px') {
-        nav.style.width = '0px';
+menu.addEventListener('click', ()=>{
+    const nav = document.querySelector('nav').style;
+
+    if(nav.width == '320px') {
+        nav.width = '0px';
     } else {
-        nav.style.width = '320px'
+        nav.width = '320px'
     }
 });
